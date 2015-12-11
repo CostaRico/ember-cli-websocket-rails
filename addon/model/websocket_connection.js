@@ -59,7 +59,9 @@ export default WebsocketRailsAbstractConnection.extend({
     send_event: function(event) {
         console.log('websocket_connection: send_event()');
         this._super();
-        return this.get('conn').send(event.serialize());
+        if(event){
+          return this.get('conn').send(event.serialize());
+        }
     }
 
 });
