@@ -39,7 +39,8 @@ export default WebsocketRailsAbstractConnection.extend({
 
         conn.onclose = function(event) {
             console.log('conn.onclose');
-            return self.on_close(event);
+            return self.dispatcher.on_close(event);
+
         };
 
         conn.onerror = function(event) {
