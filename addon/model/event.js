@@ -8,7 +8,7 @@ export default Ember.Object.extend({
 
         var data = this.get('data');
         if (!data){
-          return;
+          return true;
         }
         var name = data[0];
         var attr = data[1]; 
